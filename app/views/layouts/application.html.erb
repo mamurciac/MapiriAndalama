@@ -1,15 +1,65 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MapiriAndalamaApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <title>Mapiri Andalama</title>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Global View for Web and Mobile's metas -->
+    <meta charset = "utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+    <meta name = "viewport" content = "initial-scale = 1, maximum-scale = 1">
+
+    <!-- Site's metas and icon -->
+    <meta name = "keywords" content = "">
+    <meta name = "description" content = "">
+    <meta name = "author" content = "">
+    <%= favicon_link_tag 'Mapiri Andalama Isologo.png' %>
+
+    <!-- Custom Stylesheets -->
+    <%= stylesheet_link_tag 'customStylesheet.css' %>
+    <%= stylesheet_link_tag 'bootstrap.min.css' %>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class = "container">
+        <div class = "row">
+          <div class = "col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <div class = "isologo"><a href = "../"><%= image_tag("Mapiri Andalama Isologo.png", :width => "300", :alt => "Isologo de Mapiri Andalama") %></a></div>
+          </div>
+          <div class = "col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <div class = "main_menu">
+              <div id = "navbar_menu">
+                <ul>
+                  <li><a class = "active" href = "../">Deseo Invertir</a>
+                    <ul>
+                      <li><a href = "../">Explorar Empresas y Proyectos</a></li>
+                      <li><a href = "../">Nueva Inversión</a></li>
+                    </ul>
+                  </li>
+                  <li><a class = "active" href = "../">Mi Historial</a>
+                    <ul>
+                      <li><a href = "../">Lista de Inversiones</a></li>
+                      <li><a href = "../">Estadísticas</a></li>
+                      <li><a href = "../">Lista de Deseos</a></li>
+                      <li><a href = "../">Logros</a></li>
+                    </ul>
+                  </li>
+                  <li><a class = "active" href = "../">Consejo del Día</a></li>
+                  <li><a class = "active" href = "../">Noticias</a></li>
+                  <li><a class = "active" href = "../">Cuenta</a>
+                    <ul>
+                      <li><a href = "../">Acerca de</a></li>
+                      <li><a href = "../">Modificar Perfil</a></li>
+                      <li><a href = "../">Salir</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
   </body>
 </html>

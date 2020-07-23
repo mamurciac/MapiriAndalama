@@ -1,0 +1,187 @@
+/* In this part the fonts and default CSS stylesheets are imported */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i');
+
+*{
+	margin: 0px;
+	padding: 0px;
+	outline: none !important;
+	box-sizing: border-box;
+}
+
+html, body{
+	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+	line-height: normal;
+	font-weight: 400;
+	overflow-x: hidden;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+header{
+  background: #022D00; /* Background color for the header */
+  position: relative;
+  z-index: 1;
+}
+
+.isologo{
+	float: left;
+	margin: 17px 0px 17px 0px;
+	position: relative;
+}
+
+a{
+  color: #FFFFFF !important; /* Text color for the main menu item and support icons in hyperlinks */
+	text-decoration: none !important;
+	outline: none !important;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+ol, ul{
+	list-style: none;
+	margin: 0px;
+}
+
+.main_menu{
+	float: right;
+	width: auto;
+}
+
+#navbar_menu, #navbar_menu ul, #navbar_menu ul li, #navbar_menu ul li a, #navbar_menu #menu-button{
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+	list-style: none;
+	line-height: 1;
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#navbar_menu ul, #navbar_menu ul li, #navbar_menu ul li a, #navbar_menu #menu-button{
+	position: relative;
+}
+
+#navbar_menu:after, #navbar_menu>ul:after{
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+#navbar_menu #menu-button{
+	display: none;
+}
+
+#navbar_menu{
+	margin: 37px 0px 0px 0px;
+	float: left;
+}
+
+#navbar_menu>ul>li{
+	float: left;
+}
+
+#navbar_menu.align-center>ul{
+	font-size: 0;
+	text-align: center;
+}
+
+#navbar_menu.align-center>ul>li{
+	display: inline-block;
+	float: none;
+}
+
+#navbar_menu.align-center ul ul{
+	text-align: left;
+}
+
+#navbar_menu.align-right>ul>li{
+	float: right;
+}
+
+#navbar_menu>ul>li>a{
+	padding: 15px 18px;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+#navbar_menu ul ul{
+	position: absolute;
+	left: -9999px;
+}
+
+#navbar_menu.align-right ul ul{
+	text-align: right;
+}
+
+#navbar_menu ul ul li{
+	height: 0;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-ms-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+#navbar_menu li:hover>ul{
+	left: auto;
+}
+
+#navbar_menu.align-right li:hover>ul{
+	left: auto;
+	right: 0px;
+}
+
+#navbar_menu li:hover>ul>li{
+	height: 45px;
+}
+
+#navbar_menu ul ul ul{
+	margin-left: 100%;
+	top: 0px;
+}
+
+#navbar_menu.align-right ul ul ul{
+	margin-left: 0px;
+	margin-right: 100%;
+}
+
+#navbar_menu ul ul li a{
+  background: #D2F1FF; /* Background color for the secondary menu item */
+	color: #000000 !important; /* Text color for the secondary menu item */
+  border: solid #D2F1FF 2px;
+  padding: 15px 20px 15px;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+#navbar_menu ul ul li:last-child>a, #navbar_menu ul ul li.last-item>a{
+
+}
+
+#navbar_menu ul ul{
+	width: 250px;
+	border-top: solid #FFFFFF 2px;
+}
+
+#navbar_menu ul ul li a:hover, #navbar_menu ul ul li a:focus{
+  background: #FFDDDD; /* Background color for the secondary menu item on focus or hover event */
+  color: #000000 !important; /* Text color for the secondary menu item on focus or hover event */
+  border: solid #FFDDDD 2px;
+	padding: 15px 20px 15px 20px;
+}
