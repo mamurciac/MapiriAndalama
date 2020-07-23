@@ -20,7 +20,7 @@
     <%= stylesheet_link_tag 'bootstrap.min.css' %>
   </head>
 
-  <body>
+  <body style = "background-color: #DCFFE8;">
     <header>
       <div class = "container">
         <div class = "row">
@@ -72,8 +72,8 @@
             <h5 class = "text_card">Nivel Junior</h5>
           </div>
           <div class = "row center_content">
-            <div class = "card_security_items"><a href = "../"><%= image_tag("Chip.png", :height => "35", :alt => "Isologo de Mapiri Andalama") %></a></div>
-            <div class = "card_security_items"><a href = "../"><%= image_tag("Mastercard.png", :height => "35", :alt => "Isologo de Mapiri Andalama") %></a></div>
+            <div class = "card_security_items"><a href = "../"><%= image_tag("Chip.png", :height => "50", :alt => "Isologo de Mapiri Andalama") %></a></div>
+            <div class = "card_security_items"><a href = "../"><%= image_tag("Mastercard.png", :height => "50", :alt => "Isologo de Mapiri Andalama") %></a></div>
           </div>
           <div class = "row">
             <h5 class = "text_card">Tu saldo:</h5>
@@ -92,6 +92,52 @@
             <div class = "star_rating"><a href = "../"><%= image_tag("Star.png", :width => "35", :alt => "Isologo de Mapiri Andalama") %></a></div>
             <div class = "star_rating"><a href = "../"><%= image_tag("Star.png", :width => "35", :alt => "Isologo de Mapiri Andalama") %></a></div>
             <div class = "star_rating"><a href = "../"><%= image_tag("Star.png", :width => "35", :alt => "Isologo de Mapiri Andalama") %></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <h3 class = "black_color center_content"><b>Resumen de tu Última Inversión</b></h3>
+    <div class = "container" id = "investment_resume">
+      <div class = "row">
+        <div class = "col-lg-6">
+          <div class = "row">
+            <h5 class = "black_color"><b>Monto invertido:</b></h5>
+          </div>
+          <div class = "row">
+            <h5 class = "black_color"><b>Destino:</b></h5>
+          </div>
+          <div class = "row">
+            <h5 class = "black_color"><b>Fecha de última transacción:</b></h5>
+          </div>
+        </div>
+        <div class = "col-lg-6">
+          <div class = "row">
+            <h5 class = "center_content black_color">$   999.999.999.000</h5>
+          </div>
+          <div class = "row">
+            <h5 class = "center_content black_color">Bolsa de Valores de Nueva York</h5>
+          </div>
+          <div class = "row">
+            <h5 class = "center_content black_color">15/07/2020     16:00</h5>
+          </div>
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "col-lg-6">
+          <div class = "row">
+            <h5 class = "black_color"><b>Rendimiento:</b></h5>
+          </div>
+        </div>
+        <div class = "col-lg-3">
+          <div class = "row">
+            <h5 class = "center_content black_color">$   999.999.999.999     (0.01 %)</h5>
+          </div>
+        </div>
+        <div class = "col-lg-3">
+          <div class = "row">
+            <div class = "center_content"><a href = "../"><%= image_tag("ArrowUp.png", :width => "65", :height => "22", :alt => "Isologo de Mapiri Andalama") %></a></div>
           </div>
         </div>
       </div>

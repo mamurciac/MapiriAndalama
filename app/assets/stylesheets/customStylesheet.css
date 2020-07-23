@@ -43,6 +43,10 @@ header{
   width = 100%;
 }
 
+.black_color{
+  color: #000000;
+}
+
 .isologo{
 	float: left;
 	margin: 17px 0px 17px 0px;
@@ -53,6 +57,16 @@ header{
 	width: 100%;
 	display: flex;
 	justify-content: center;
+}
+
+.left_content{
+  width: 50%;
+	align: left;
+}
+
+.right_content{
+  width: 50%;
+	align: right;
 }
 
 .card_security_items{
@@ -330,4 +344,9 @@ p.large_2 {
 	font-weight: 500;
 	font-size: 18px;
 	color: #898989;
+}
+
+#investment_resume{
+  width: 100%;
+  margin: 45px;
 }
