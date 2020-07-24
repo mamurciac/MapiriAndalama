@@ -18,6 +18,9 @@
     <!-- Custom Stylesheets -->
     <%= stylesheet_link_tag 'customStylesheet.css' %>
     <%= stylesheet_link_tag 'bootstrap.min.css' %>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   </head>
 
   <body style = "background-color: #DCFFE8;">
@@ -142,5 +145,331 @@
         </div>
       </div>
     </div>
-  </body>
+
+    <h3 class = "black_color center_content"><b>Mi Lista de Deseos</b></h3>
+    <div class = "container">
+	     <div class = "row">
+		       <div class = "multiCarousel" data-items = "1,2,4,3" data-slide = "1" id = "multiCarousel" data-interval = "1000">
+             <div class = "multiCarousel-inner">
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Macbook.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Macbook Pro</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-100">
+                         <p class = "green_money_color">100%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   999.999.999.999</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Iphone.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Iphone 11 Pro</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-83">
+                         <p class = "green_money_color">83%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   833.333.333.333</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Cruiser.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Viaje en Crucero</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-66">
+                         <p class = "green_money_color">66%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   666.666.666.666</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Car.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Vehículo Deportivo Clásico</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-50">
+                         <p class = "green_money_color">50%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   499.999.999.999</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Motorcycle.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Motocicleta Clásica</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-33">
+                         <p class = "green_money_color">33%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   333.333.333.333</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Mansion.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Mansión en Hollywood</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-16">
+                         <p class = "green_money_color">16%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   166.666.666.666</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("House.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Casa Lujosa</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-0">
+                         <p class = "green_money_color">0%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   0</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Tablet.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Tablet Wacom</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-50">
+                         <p class = "green_money_color">50%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   499.999.999.999</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Travel.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Viaje Internacional</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-50">
+                         <p class = "green_money_color">50%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   499.999.999.999</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <button class = "btn btn-primary leftLst"><</button>
+             <button class = "btn btn-primary rightLst">></button>
+           </div>
+         </div>
+       </div>
+     </body>
+
+    <script type = "text/javascript">
+$(document).ready(function (){
+  var itemsMainDiv = ('.multiCarousel');
+  var itemsDiv = ('.multiCarousel-inner');
+  var itemWidth = "";
+
+  $('.leftLst, .rightLst').click(function (){
+    var condition = $(this).hasClass("leftLst");
+    if(condition)
+      click(0, this);
+    else
+      click(1, this)
+    });
+
+    ResCarouselSize();
+    $(window).resize(function (){
+        ResCarouselSize();
+    });
+
+    //This function defines the size of the items
+    function ResCarouselSize(){
+      var incno = 0;
+      var dataItems = ("data-items");
+      var itemClass = ('.item');
+      var id = 0;
+      var btnParentSb = '';
+      var itemsSplit = '';
+      var sampwidth = $(itemsMainDiv).width();
+      var bodyWidth = $('body').width();
+
+      $(itemsDiv).each(function (){
+        id = id + 1;
+        var itemNumbers = $(this).find(itemClass).length;
+        btnParentSb = $(this).parent().attr(dataItems);
+        itemsSplit = btnParentSb.split(',');
+        $(this).parent().attr("id", "multiCarousel" + id);
+
+        if(bodyWidth >= 1200){
+          incno = itemsSplit[3];
+          itemWidth = sampwidth / incno;
+        }else if(bodyWidth >= 992){
+          incno = itemsSplit[2];
+          itemWidth = sampwidth / incno;
+        }else if(bodyWidth >= 768){
+          incno = itemsSplit[1];
+          itemWidth = sampwidth / incno;
+        }else{
+          incno = itemsSplit[0];
+          itemWidth = sampwidth / incno;
+        }
+
+        $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+        $(this).find(itemClass).each(function (){
+          $(this).outerWidth(itemWidth);
+        });
+
+        $(".leftLst").addClass("over");
+        $(".rightLst").removeClass("over");
+      });
+    }
+
+    //This function is used to move the items
+    function ResCarousel(e, el, s){
+      var leftBtn = ('.leftLst');
+      var rightBtn = ('.rightLst');
+      var translateXval = '';
+      var divStyle = $(el + ' ' + itemsDiv).css('transform');
+      var values = divStyle.match(/-?[\d\.]+/g);
+      var xds = Math.abs(values[4]);
+      if(e == 0){
+        translateXval = parseInt(xds) - parseInt(itemWidth * s);
+        $(el + ' ' + rightBtn).removeClass("over");
+
+        if(translateXval <= itemWidth / 2){
+          translateXval = 0;
+          $(el + ' ' + leftBtn).addClass("over");
+        }
+      }else if(e == 1){
+        var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+        translateXval = parseInt(xds) + parseInt(itemWidth * s);
+        $(el + ' ' + leftBtn).removeClass("over");
+
+        if(translateXval >= itemsCondition - itemWidth / 2){
+          translateXval = itemsCondition;
+          $(el + ' ' + rightBtn).addClass("over");
+        }
+      }
+      $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+    }
+
+    //It is used to get some elements from btn
+    function click(ell, ee){
+      var Parent = "#" + $(ee).parent().attr("id");
+      var slide = $(Parent).attr("data-slide");
+      ResCarousel(ell, Parent, slide);
+    }
+  });
+</script>
 </html>

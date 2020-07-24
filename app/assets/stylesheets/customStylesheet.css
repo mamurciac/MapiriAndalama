@@ -47,6 +47,10 @@ header{
   color: #000000;
 }
 
+.green_money_color{
+  color: #009600;
+}
+
 .isologo{
 	float: left;
 	margin: 17px 0px 17px 0px;
@@ -243,11 +247,16 @@ h1, h2, h3, h4, h5, h6{
 	letter-spacing: 0;
 	font-weight: normal;
 	position: relative;
-	padding: 0;
+	padding-left: 5px;
+  padding-right: 5px;
 	font-weight: normal;
 	line-height: normal;
 	color: #1f1f1f;
-	margin: 0
+	margin: 0px;
+}
+
+.text_traslated{
+  transform: translate(0%, 0%);
 }
 
 h6{
@@ -290,7 +299,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 	opacity: 1
 }
 
-h2 {
+h2{
 	font-size: 35px;
 	color: #000;
 	line-height: 36px;
@@ -300,7 +309,7 @@ h2 {
 	margin-top: 15px;
 }
 
-h3 {
+h3{
 	font-size: 24px;
 	color: #000;
 	line-height: normal;
@@ -310,7 +319,7 @@ h3 {
 	font-weight: 600;
 }
 
-h4 {
+h4{
 	font-size: 18px;
 	color: #000;
 	line-height: 21px;
@@ -319,7 +328,7 @@ h4 {
 	margin: 30px 0 20px 0;
 }
 
-h5 {
+h5{
 	font-size: 15px;
 	font-weight: 700;
 	margin: 0;
@@ -327,20 +336,23 @@ h5 {
 	color: #000;
 }
 
-p {
+p{
+  transform: translate(0%, 25%);
 	color: #707070;
-	font-size: 15px;
+	font-size: 20px;
 	line-height: 21px;
+  position: relative;
+  z-index: 1;
 }
 
-p.large {
+p.large{
 	color: #898989;
 	font-size: 20px;
 	font-weight: 400;
 	margin: 0 0 10px 0;
 }
 
-p.large_2 {
+p.large_2{
 	font-weight: 500;
 	font-size: 18px;
 	color: #898989;
@@ -349,4 +361,105 @@ p.large_2 {
 #investment_resume{
   width: 100%;
   margin: 45px;
+}
+
+.multiCarousel{
+  float: left;
+  overflow: hidden;
+  padding: 15px;
+  width: 100%;
+  position:relative;
+}
+
+.multiCarousel .multiCarousel-inner{
+  transition: 1s ease all;
+  float: left;
+}
+
+.multiCarousel .multiCarousel-inner .item{
+  float: left;
+}
+.multiCarousel .multiCarousel-inner .item>div{
+  text-align: center;
+  padding: 25px;
+  margin: 25px;
+  background: #FFFFFF;
+  border: solid #000000 3.25px;
+  border-radius: 18px;
+}
+
+.multiCarousel .leftLst, .multiCarousel .rightLst{
+  position:absolute;
+  border-radius: 50%;
+  top: calc(50% - 20px);
+}
+
+.multiCarousel .leftLst{
+  left: 0px;
+}
+
+.multiCarousel .rightLst{
+  right: 0px;
+}
+
+.multiCarousel .leftLst.over, .multiCarousel .rightLst.over{
+  pointer-events: none;
+  background: #CCCCCC;
+}
+
+:root{
+  --size: 85px;
+  --bord: 20px;
+}
+
+.chart{
+  width: var(--size);
+  height: var(--size);
+  margin: 0px;
+  border-radius: 50%;
+  background-image: conic-gradient(lightseagreen var(--value), lightgrey var(--value));
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - var(--bord));
+  height: calc(100% - var(--bord));
+  background: white;
+  border-radius: inherit;
+}
+
+.x-100{
+  --value: 100%;
+}
+
+.x-83{
+  --value: 83%;
+}
+
+.x-66{
+  --value: 66%;
+}
+
+.x-50{
+  --value: 50%;
+}
+
+.x-33{
+  --value: 33%;
+}
+
+.x-16{
+  --value: 16%;
+}
+
+.x-0{
+  --value: 0%;
 }
