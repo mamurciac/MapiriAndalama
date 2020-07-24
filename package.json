@@ -1,5 +1,5 @@
 {
-  "name": "mapiriAndalamaApp",
+  "name": "MapiriAndalamaApp",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
