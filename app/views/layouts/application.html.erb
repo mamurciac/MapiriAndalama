@@ -1,15 +1,640 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MapiriAndalamaApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <title>Mapiri Andalama</title>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Global View for Web and Mobile's metas -->
+    <meta charset = "utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+    <meta name = "viewport" content = "initial-scale = 1, maximum-scale = 1">
+
+    <!-- Site's metas and icon -->
+    <meta name = "keywords" content = "">
+    <meta name = "description" content = "">
+    <meta name = "author" content = "">
+    <%= favicon_link_tag 'Mapiri Andalama Isologo.png' %>
+
+    <!-- Custom Stylesheets -->
+    <%= stylesheet_link_tag 'customStylesheet.css' %>
+    <%= stylesheet_link_tag 'bootstrap.min.css' %>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+  <body style = "background-color: #DCFFE8;">
+    <header>
+      <div class = "container">
+        <div class = "row">
+          <div class = "col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <div class = "isologo"><a href = "../"><%= image_tag("Mapiri Andalama Isologo.png", :width => "300", :alt => "Isologo de Mapiri Andalama") %></a></div>
+          </div>
+          <div class = "col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <div class = "main_menu">
+              <div id = "navbar_menu">
+                <ul>
+                  <li><a class = "active" href = "../">Deseo Invertir</a>
+                    <ul>
+                      <li><a href = "../">Explorar Empresas y Proyectos</a></li>
+                      <li><a href = "../">Nueva Inversión</a></li>
+                    </ul>
+                  </li>
+                  <li><a class = "active" href = "../">Mi Historial</a>
+                    <ul>
+                      <li><a href = "../">Lista de Inversiones</a></li>
+                      <li><a href = "../">Estadísticas</a></li>
+                      <li><a href = "../">Lista de Deseos</a></li>
+                      <li><a href = "../">Logros</a></li>
+                    </ul>
+                  </li>
+                  <li><a class = "active" href = "../">Consejo del Día</a></li>
+                  <li><a class = "active" href = "../">Noticias</a></li>
+                  <li><a class = "active" href = "../">Cuenta</a>
+                    <ul>
+                      <li><a href = "../">Acerca de</a></li>
+                      <li><a href = "../">Modificar Perfil</a></li>
+                      <li><a href = "../">Salir</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class = "container" id = "welcome_card">
+      <div class = "row">
+        <div class = "col-lg-9">
+          <div class = "row">
+            <h2 class = "text_card"><b>Buenos días, Michael Andrés</b></h2>
+          </div>
+          <div class = "row">
+            <h5 class = "text_card">Nivel Junior</h5>
+          </div>
+          <div class = "row center_content">
+            <div class = "card_security_items"><a href = "../"><%= image_tag("Chip.png", :height => "50", :alt => "Isologo de Mapiri Andalama") %></a></div>
+            <div class = "card_security_items"><a href = "../"><%= image_tag("Mastercard.png", :height => "50", :alt => "Isologo de Mapiri Andalama") %></a></div>
+          </div>
+          <div class = "row">
+            <h5 class = "text_card">Tu saldo:</h5>
+          </div>
+          <div class = "row">
+            <h2 class = "text_card"><b>$   999.999.999.999</b></h2>
+          </div>
+        </div>
+        <div class = "col-lg-3">
+          <div class = "row center_content">
+            <div class = "isologo"><a href = "../"><%= image_tag("NickPicture.png", :width => "200", :alt => "Isologo de Mapiri Andalama") %></a></div>
+          </div>
+          <div class = "row center_content">
+            <div class = "star_rating"><a href = "../"><%= image_tag("Star.png", :width => "35", :alt => "Isologo de Mapiri Andalama") %></a></div>
+            <div class = "star_rating"><a href = "../"><%= image_tag("Star.png", :width => "35", :alt => "Isologo de Mapiri Andalama") %></a></div>
+            <div class = "star_rating"><a href = "../"><%= image_tag("Star.png", :width => "35", :alt => "Isologo de Mapiri Andalama") %></a></div>
+            <div class = "star_rating"><a href = "../"><%= image_tag("Star.png", :width => "35", :alt => "Isologo de Mapiri Andalama") %></a></div>
+            <div class = "star_rating"><a href = "../"><%= image_tag("Star.png", :width => "35", :alt => "Isologo de Mapiri Andalama") %></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <h3 class = "black_color center_content"><b>Resumen de tu Última Inversión</b></h3>
+    <div class = "container" id = "investment_resume">
+      <div class = "row">
+        <div class = "col-lg-6">
+          <div class = "row">
+            <h5 class = "black_color"><b>Monto invertido:</b></h5>
+          </div>
+          <div class = "row">
+            <h5 class = "black_color"><b>Destino:</b></h5>
+          </div>
+          <div class = "row">
+            <h5 class = "black_color"><b>Fecha de última transacción:</b></h5>
+          </div>
+        </div>
+        <div class = "col-lg-6">
+          <div class = "row">
+            <h5 class = "center_content black_color">$   999.999.999.000</h5>
+          </div>
+          <div class = "row">
+            <h5 class = "center_content black_color">Bolsa de Valores de Nueva York</h5>
+          </div>
+          <div class = "row">
+            <h5 class = "center_content black_color">15/07/2020     16:00</h5>
+          </div>
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "col-lg-6">
+          <div class = "row">
+            <h5 class = "black_color"><b>Rendimiento:</b></h5>
+          </div>
+        </div>
+        <div class = "col-lg-3">
+          <div class = "row">
+            <h5 class = "center_content black_color">$   999.999.999.999     (0.01 %)</h5>
+          </div>
+        </div>
+        <div class = "col-lg-3">
+          <div class = "row">
+            <div class = "center_content"><a href = "../"><%= image_tag("ArrowUp.png", :width => "65", :height => "22", :alt => "Isologo de Mapiri Andalama") %></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class = "black_color center_content"><b>Mi Lista de Deseos</b></h3>
+    <div class = "container">
+	     <div class = "row">
+		       <div class = "multiCarousel" data-items = "1,2,4,3" data-slide = "1" id = "multiCarousel" data-interval = "1000">
+             <div class = "multiCarousel-inner">
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Macbook.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Macbook Pro</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-100">
+                         <p class = "green_money_color">100%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   999.999.999.999</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Iphone.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Iphone 11 Pro</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-83">
+                         <p class = "green_money_color">83%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   833.333.333.333</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Cruiser.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Viaje en Crucero</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-66">
+                         <p class = "green_money_color">66%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   666.666.666.666</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Car.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Vehículo Deportivo Clásico</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-50">
+                         <p class = "green_money_color">50%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   499.999.999.999</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Motorcycle.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Motocicleta Clásica</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-33">
+                         <p class = "green_money_color">33%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   333.333.333.333</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Mansion.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Mansión en Hollywood</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-16">
+                         <p class = "green_money_color">16%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   166.666.666.666</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("House.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Casa Lujosa</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-0">
+                         <p class = "green_money_color">0%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   0</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Tablet.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Tablet Wacom</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-50">
+                         <p class = "green_money_color">50%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   499.999.999.999</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class = "item">
+                 <div class = "pad15">
+                   <div class = "row">
+                     <div class = "card_security_items center_content"><%= image_tag("Travel.png", :width => "220", :height => "150", :alt => "Isologo de Mapiri Andalama") %></div>
+                   </div>
+                   <h4 class = "black_color"><b>Viaje Internacional</b></h4>
+                   <div class = "row">
+                     <div class = "col-xs-4">
+                       <div class = "chart x-50">
+                         <p class = "green_money_color">50%</p>
+                       </div>
+                     </div>
+                     <div class = "col-xs-8">
+                       <div class = "row">
+                         <h4 class = "green_money_color center_content text_traslated"><b>$   499.999.999.999</b></h4>
+                       </div>
+                       <div class = "row">
+                         <h5 class = "black_color center_content text_traslated">$   999.999.999.999</h5>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <button class = "btn btn-primary leftLst"><</button>
+             <button class = "btn btn-primary rightLst">></button>
+           </div>
+         </div>
+       </div>
+
+       <h3 class = "black_color center_content"><b>Inversiones de Interés</b></h3>
+       <div class = "container">
+   	     <div class = "row">
+   		      <div class = "multiCarousel" data-items = "1,2,4,1" data-slide = "1" id = "multiCarousel" data-interval = "1000">
+              <div class = "multiCarousel-inner">
+                <div class = "item">
+                  <div class = "pad15">
+                    <div class = "row">
+                      <div class = "col-xs-4">
+                        <div class = "charttt x-16">
+                          <p class = "green_money_color supertext"><b>16%</b></p>
+                        </div>
+                      </div>
+                      <div class = "col-xs-8">
+                        <div class = "row">
+                          <h1 class = "green_money_color center_content text_traslateddd"><b>Skandia</b></h1>
+                        </div>
+                        <div class = "row">
+                          <h3 class = "black_color center_content text_traslateddd">Fondo de Pensiones Old Mutual</h3>
+                        </div>
+                        <div class = "row">
+                          <h1 class = "black_color center_content text_traslateddd"><b>$ 100.240.000</b></h1>
+                        </div>
+                        <div class = "row">
+                          <h4 class = "green_money_color center_content text_traslateddd"><b>Tipo de Activo</b></h4>
+                        </div>
+                        <div class = "row">
+                          <h4 class = "black_color center_content text_traslateddd">Renta Fija y Depósito a la Fija</h4>
+                        </div>
+                        <div class = "row">
+                          <button class = "button center"><b>QUIERO INVERTIR AQUÍ</b></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class = "item">
+                  <div class = "pad15">
+                    <div class = "row">
+                      <div class = "col-xs-4">
+                        <div class = "charttt x-16">
+                          <p class = "red_money_color supertext"><b>16%</b></p>
+                        </div>
+                      </div>
+                      <div class = "col-xs-8">
+                        <div class = "row">
+                          <h1 class = "red_money_color center_content text_traslateddd"><b>Reficar</b></h1>
+                        </div>
+                        <div class = "row">
+                          <h3 class = "black_color center_content text_traslateddd">Exrefinera Nacional de Cartagena</h3>
+                        </div>
+                        <div class = "row">
+                          <h1 class = "black_color center_content text_traslateddd"><b>$ 100.250.000</b></h1>
+                        </div>
+                        <div class = "row">
+                          <h4 class = "red_money_color center_content text_traslateddd"><b>Tipo de Activo</b></h4>
+                        </div>
+                        <div class = "row">
+                          <h4 class = "black_color center_content text_traslateddd">Renta Fija y Depósito a la Fija</h4>
+                        </div>
+                        <div class = "row">
+                          <button class = "buttonaux center"><b>QUIERO INVERTIR AQUÍ</b></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class = "item">
+                  <div class = "pad15">
+                    <div class = "row">
+                      <div class = "col-xs-4">
+                        <div class = "charttt x-66">
+                          <p class = "green_money_color supertext"><b>66%</b></p>
+                        </div>
+                      </div>
+                      <div class = "col-xs-8">
+                        <div class = "row">
+                          <h1 class = "green_money_color center_content text_traslateddd"><b>Odebrecht</b></h1>
+                        </div>
+                        <div class = "row">
+                          <h3 class = "black_color center_content text_traslateddd">Conglomerado de Brasil en Ingeniería</h3>
+                        </div>
+                        <div class = "row">
+                          <h1 class = "black_color center_content text_traslateddd"><b>$ 300.749.500</b></h1>
+                        </div>
+                        <div class = "row">
+                          <h4 class = "green_money_color center_content text_traslateddd"><b>Tipo de Activo</b></h4>
+                        </div>
+                        <div class = "row">
+                          <h4 class = "black_color center_content text_traslateddd">Renta Fija y Depósito a la Fija</h4>
+                        </div>
+                        <div class = "row">
+                          <button class = "button center"><b>QUIERO INVERTIR AQUÍ</b></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class = "item">
+                  <div class = "pad15">
+                    <div class = "row">
+                      <div class = "col-xs-4">
+                        <div class = "charttt x-50">
+                          <p class = "red_money_color supertext"><b>50%</b></p>
+                        </div>
+                      </div>
+                      <div class = "col-xs-8">
+                        <div class = "row">
+                          <h1 class = "red_money_color center_content text_traslateddd"><b>Cinemark</b></h1>
+                        </div>
+                        <div class = "row">
+                          <h3 class = "black_color center_content text_traslateddd">Cadena de cines de origen estadounidense</h3>
+                        </div>
+                        <div class = "row">
+                          <h1 class = "black_color center_content text_traslateddd"><b>$ 200.250.000</b></h1>
+                        </div>
+                        <div class = "row">
+                          <h4 class = "red_money_color center_content text_traslateddd"><b>Tipo de Activo</b></h4>
+                        </div>
+                        <div class = "row">
+                          <h4 class = "black_color center_content text_traslateddd">Renta Fija y Depósito a la Fija</h4>
+                        </div>
+                        <div class = "row">
+                          <button class = "buttonaux center"><b>QUIERO INVERTIR AQUÍ</b></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class = "btn btn-primary leftLst"><</button>
+              <button class = "btn btn-primary rightLst">></button>
+            </div>
+          </div>
+        </div>
+        <h4 class = "black_color center_content">Tu dinero se invierte de la forma más eficiente de acuerdo al perfil de riesgo asignado por nuestro RoboAdvisor</h4>
+        <br><br><br><br><br>
+
+        <footer>
+          <div class="container">
+            <table>
+              <tr>
+                <th class = "center_content">Mapiri Andalama y Asociados Inc.</th>
+              </tr>
+              <tr>
+                <th class = "center_content">Diseñado por Compumundo Hipermegarred</th>
+              </tr>
+              <tr>
+                <th class = "center_content">Bogotá D.C.</th>
+              </tr>
+              <tr>
+                <th class = "center_content">Dirección de Correo Electrónico: mapiriandalama@hotmail.com</th>
+              </tr>
+              <tr>
+                <th class = "center_content">Todos los Derechos Reservados &copy;</th>
+              </tr>
+            </table>
+          </div>
+        </footer>
+    </body>
+
+    <script type = "text/javascript">
+$(document).ready(function (){
+  var itemsMainDiv = ('.multiCarousel');
+  var itemsDiv = ('.multiCarousel-inner');
+  var itemWidth = "";
+
+  $('.leftLst, .rightLst').click(function (){
+    var condition = $(this).hasClass("leftLst");
+    if(condition)
+      click(0, this);
+    else
+      click(1, this)
+    });
+
+    ResCarouselSize();
+    $(window).resize(function (){
+        ResCarouselSize();
+    });
+
+    //This function defines the size of the items
+    function ResCarouselSize(){
+      var incno = 0;
+      var dataItems = ("data-items");
+      var itemClass = ('.item');
+      var id = 0;
+      var btnParentSb = '';
+      var itemsSplit = '';
+      var sampwidth = $(itemsMainDiv).width();
+      var bodyWidth = $('body').width();
+
+      $(itemsDiv).each(function (){
+        id = id + 1;
+        var itemNumbers = $(this).find(itemClass).length;
+        btnParentSb = $(this).parent().attr(dataItems);
+        itemsSplit = btnParentSb.split(',');
+        $(this).parent().attr("id", "multiCarousel" + id);
+
+        if(bodyWidth >= 1200){
+          incno = itemsSplit[3];
+          itemWidth = sampwidth / incno;
+        }else if(bodyWidth >= 992){
+          incno = itemsSplit[2];
+          itemWidth = sampwidth / incno;
+        }else if(bodyWidth >= 768){
+          incno = itemsSplit[1];
+          itemWidth = sampwidth / incno;
+        }else{
+          incno = itemsSplit[0];
+          itemWidth = sampwidth / incno;
+        }
+
+        $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+        $(this).find(itemClass).each(function (){
+          $(this).outerWidth(itemWidth);
+        });
+
+        $(".leftLst").addClass("over");
+        $(".rightLst").removeClass("over");
+      });
+    }
+
+    //This function is used to move the items
+    function ResCarousel(e, el, s){
+      var leftBtn = ('.leftLst');
+      var rightBtn = ('.rightLst');
+      var translateXval = '';
+      var divStyle = $(el + ' ' + itemsDiv).css('transform');
+      var values = divStyle.match(/-?[\d\.]+/g);
+      var xds = Math.abs(values[4]);
+      if(e == 0){
+        translateXval = parseInt(xds) - parseInt(itemWidth * s);
+        $(el + ' ' + rightBtn).removeClass("over");
+
+        if(translateXval <= itemWidth / 2){
+          translateXval = 0;
+          $(el + ' ' + leftBtn).addClass("over");
+        }
+      }else if(e == 1){
+        var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+        translateXval = parseInt(xds) + parseInt(itemWidth * s);
+        $(el + ' ' + leftBtn).removeClass("over");
+
+        if(translateXval >= itemsCondition - itemWidth / 2){
+          translateXval = itemsCondition;
+          $(el + ' ' + rightBtn).addClass("over");
+        }
+      }
+      $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+    }
+
+    //It is used to get some elements from btn
+    function click(ell, ee){
+      var Parent = "#" + $(ee).parent().attr("id");
+      var slide = $(Parent).attr("data-slide");
+      ResCarousel(ell, Parent, slide);
+    }
+  });
+</script>
 </html>
