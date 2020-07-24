@@ -546,3 +546,24 @@ p.large_2{
 .supertext{
   font-size: 60px;
 }
+
+footer{
+  width: 100%;
+  background-color: rgba(200, 0, 0, 0.85);
+  margin: auto;
+  padding: 15px 0px 15px 0px;
+}
+
+footer table{
+  font-family: 'Lato';
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+
+footer th{
+  color: white;
+  height: 100%;
+  padding: 2px 0px 2px 0px;
+  font-size: 17px;
+}
