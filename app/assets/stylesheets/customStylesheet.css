@@ -51,6 +51,10 @@ header{
   color: #009600;
 }
 
+.red_money_color{
+  color: #960000;
+}
+
 .isologo{
 	float: left;
 	margin: 17px 0px 17px 0px;
@@ -259,6 +263,10 @@ h1, h2, h3, h4, h5, h6{
   transform: translate(0%, 0%);
 }
 
+.text_traslateddd{
+  transform: translate(0%, -35%);
+}
+
 h6{
 	font-size: 14px;
 	margin-bottom: 10px;
@@ -379,6 +387,11 @@ p.large_2{
 .multiCarousel .multiCarousel-inner .item{
   float: left;
 }
+
+.multiCarousel .multiCarousel-inner .itemmm{
+  float: left;
+}
+
 .multiCarousel .multiCarousel-inner .item>div{
   text-align: center;
   padding: 25px;
@@ -386,6 +399,16 @@ p.large_2{
   background: #FFFFFF;
   border: solid #000000 3.25px;
   border-radius: 18px;
+}
+
+.multiCarousel .multiCarousel-inner .itemmm>div{
+  text-align: center;
+  padding: 35px;
+  margin: 50px;
+  background: #FFFFFF;
+  border: solid #000000 3.25px;
+  border-radius: 18px;
+  align: center;
 }
 
 .multiCarousel .leftLst, .multiCarousel .rightLst{
@@ -410,6 +433,8 @@ p.large_2{
 :root{
   --size: 85px;
   --bord: 20px;
+  --sizeee: 350px;
+  --borddd: 125px;
 }
 
 .chart{
@@ -432,6 +457,30 @@ p.large_2{
   transform: translate(-50%, -50%);
   width: calc(100% - var(--bord));
   height: calc(100% - var(--bord));
+  background: white;
+  border-radius: inherit;
+}
+
+.charttt{
+  width: var(--sizeee);
+  height: var(--sizeee);
+  margin: 0px;
+  border-radius: 50%;
+  background-image: conic-gradient(lightseagreen var(--value), lightgrey var(--value));
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.charttt::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - var(--borddd));
+  height: calc(100% - var(--borddd));
   background: white;
   border-radius: inherit;
 }
@@ -462,4 +511,38 @@ p.large_2{
 
 .x-0{
   --value: 0%;
+}
+
+.button{
+  background-color: #007600;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transform: translate(103%, 25%);
+}
+
+.buttonaux{
+  background-color: #760000;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transform: translate(103%, 25%);
+}
+
+.supertext{
+  font-size: 60px;
 }
